@@ -12,7 +12,6 @@ public class ScoreTable extends Actor {
     private final Main main;
 
     private DataBase dataBase;
-    private Texture background;
 
     private float X;
     private float Y1;
@@ -22,7 +21,6 @@ public class ScoreTable extends Actor {
         this.main = main;
 
         dataBase = new DataBase();
-        background = new Texture("Pictures/Other/Backgrounds/all.png");
 
         X = main.stage.getWidth()/7;
         Y1 = main.stage.getHeight()/2 + main.stage.getHeight()/9;
@@ -31,7 +29,6 @@ public class ScoreTable extends Actor {
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
-        batch.draw(background, 0, 0);
         main.fontOrdinary.setColor(Color.RED);
         main.fontOrdinary.draw(batch, "1. " + dataBase.playerScore(1), X, Y1);
         main.fontOrdinary.setColor(Color.WHITE);

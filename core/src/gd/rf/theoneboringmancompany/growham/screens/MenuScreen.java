@@ -25,6 +25,8 @@ public class MenuScreen extends MyScreen {
     @Override
     public void show() {
         super.show();
+        main.fontOrdinary.getData().setScale(2.5f);
+
         main.stage.addActor(new Play(main));
         main.stage.addActor(new Scores(main));
         main.stage.addActor(new BreakAndPlay(main));

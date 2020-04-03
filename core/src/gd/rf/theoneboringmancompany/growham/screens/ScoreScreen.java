@@ -23,8 +23,8 @@ public class ScoreScreen extends MyScreen {
 
     @Override
     public void show() {
-        main.stage.addActor(new ScoreTable(main));
         main.stage.addActor(new Back(main, MenuScreen.NUMBER));
+        main.stage.addActor(new ScoreTable(main));
         main.stage.addActor(new Who(main));
         main.stage.addActor(new Time(main));
 

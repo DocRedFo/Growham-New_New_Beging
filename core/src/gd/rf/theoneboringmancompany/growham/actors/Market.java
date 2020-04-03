@@ -16,6 +16,7 @@ public class Market extends MyButton {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 main.stage.clear();
+                sound.play(Volume);
                 main.setScreen(new MarketScreen(main));
                 dispose();
             }

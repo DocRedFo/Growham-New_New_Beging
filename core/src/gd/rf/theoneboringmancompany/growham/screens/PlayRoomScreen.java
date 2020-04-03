@@ -4,8 +4,12 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
 
 import gd.rf.theoneboringmancompany.growham.Main;
+import gd.rf.theoneboringmancompany.growham.actors.Emotions;
+import gd.rf.theoneboringmancompany.growham.actors.FitPlay;
+import gd.rf.theoneboringmancompany.growham.actors.Information;
 import gd.rf.theoneboringmancompany.growham.actors.Market;
 import gd.rf.theoneboringmancompany.growham.actors.Room;
+import gd.rf.theoneboringmancompany.growham.actors.Sleep;
 import gd.rf.theoneboringmancompany.growham.utils.MyScreen;
 
 public class PlayRoomScreen extends MyScreen {
@@ -23,15 +27,12 @@ public class PlayRoomScreen extends MyScreen {
     @Override
     public void show() {
         main.stage.addActor(new Room(main));
+        main.stage.addActor(new Information(main));
         main.stage.addActor(new Market(main));
-        main.stage.addActor(main.hamster); //main.hamster
+        main.stage.addActor(main.hamster);
         main.stage.addActor(new Sleep(main));
         main.stage.addActor(new FitPlay(main));
-        main.stage.addActor(new Information(main));
-//        main.stage.addActor(new Emotions(main)); // Объедени
-//        main.stage.addActor(new Hungry(main)); // Всё Это
-//        main.stage.addActor(new Health(main)); // В
-//        main.stage.addActor(new Money(main)); // Один Table
+        main.stage.addActor(new Emotions(main));
 
         music = Gdx.audio.newMusic(Gdx.files.internal("Audio/Music/Ordinary.mp3"));
         music.setLooping(true);
