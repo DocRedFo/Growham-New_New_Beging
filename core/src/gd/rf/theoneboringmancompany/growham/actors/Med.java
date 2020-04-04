@@ -13,7 +13,6 @@ public class Med extends MyButton {
                     "Pictures/Other/Med/med.png", "50");
         setPosition(main.stage.getWidth() - imgButton.getWidth()*1.5f,
                     main.stage.getHeight()/2 + main.stage.getHeight()/6);
-
         sound = Gdx.audio.newSound(Gdx.files.internal("Audio/UI/health.mp3"));
 
         addListener(new ClickListener(){

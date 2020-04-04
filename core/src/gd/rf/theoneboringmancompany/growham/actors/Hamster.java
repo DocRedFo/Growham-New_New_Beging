@@ -9,6 +9,10 @@ import gd.rf.theoneboringmancompany.growham.Main;
 public class Hamster extends Actor {
     private final Main main;
 
+    protected String name;
+
+    private boolean hasNamed = false;
+
     private int age = 0;
     private int health = 100;
     private int hungry = 100;
