@@ -12,7 +12,7 @@ public class Hamster extends Actor {
     private int age = 0;
     private int health = 100;
     private int hungry = 100;
-    private int money = 100;
+    private int money = 2001;
     private int roomLevel = 1;
 
     private TextureAtlas atlas;
@@ -24,43 +24,41 @@ public class Hamster extends Actor {
         this.main = main;
     }
 
-    public int getHealth() {
+
+
+    int getHealth() {
         return health;
     }
 
-    public int getAge() {
+    int getAge() {
         return age;
     }
 
-    public int getMoney() {
+    int getMoney() {
         return money;
     }
 
-    public int getHungry() {
+    int getHungry() {
         return hungry;
     }
 
-    public int getRoomLevel() {
+    int getRoomLevel() {
         return roomLevel;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public void setHealth(int health) {
+    void setHealth(int health) {
         this.health = health;
     }
 
-    public void setHungry(int hungry) {
+    void setHungry(int hungry) {
         this.hungry = hungry;
     }
 
-    public void setMoney(int money) {
+    void setMoney(int money) {
         this.money = money;
     }
 
-    public void setRoomLevel(int roomLevel) {
+    void setRoomLevel(int roomLevel) {
         this.roomLevel = roomLevel;
     }
 }

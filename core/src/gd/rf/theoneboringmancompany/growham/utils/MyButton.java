@@ -39,7 +39,7 @@ public abstract class MyButton extends Button {
         img = new Texture(pathToImg);
         sound = Gdx.audio.newSound(Gdx.files.internal("Audio/UI/button.mp3"));
 
-        this.howMuch = howMuch + " $";
+        this.howMuch = howMuch;
 
         setWidth(imgButton.getWidth());
         setHeight(imgButton.getHeight());
@@ -59,7 +59,7 @@ public abstract class MyButton extends Button {
                             getY() - img.getHeight() / 3.2f);
             main.fontOrdinary.getData().setScale(2.5f);
             main.fontOrdinary.setColor(Color.WHITE);
-            main.fontOrdinary.draw(batch, howMuch,  main.stage.getWidth()/2 - main.stage.getWidth()/8,
+            main.fontOrdinary.draw(batch, howMuch + " $",  main.stage.getWidth()/2 - main.stage.getWidth()/8,
                                                     getY() + imgButton.getHeight()/2.5f);
         }
     }

@@ -53,7 +53,7 @@ public class Information extends Table {
         Color CHealth = Color.WHITE;
         Color CHungry = Color.WHITE;
 
-        if (hamster.getHealth() <= 25){
+        if (hamster.getHealth() <= 10){
             CHealth = Color.RED;
         }
         if (hamster.getHungry() <= 10){

@@ -14,11 +14,13 @@ public class Food extends MyButton {
                     "10");
         setPosition(main.stage.getWidth() - imgButton.getWidth()*1.5f,
                     main.stage.getHeight()/2 - main.stage.getHeight()/12);
+        sound = Gdx.audio.newSound(Gdx.files.internal("Audio/UI/health.mp3"));
 
         addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 if (main.hamster.getHungry() < 100 && main.hamster.getMoney() >= Integer.parseInt(howMuch)){
+                    sound.play(Volume);
                     main.hamster.setMoney(main.hamster.getMoney() - Integer.parseInt(howMuch));
                     int n = main.hamster.getHungry() + 5;
                     if (n > 100){

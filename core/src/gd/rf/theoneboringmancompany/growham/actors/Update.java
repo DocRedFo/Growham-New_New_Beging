@@ -25,6 +25,7 @@ public class Update extends MyButton {
         main.fontOrdinary.getData().setScale(2.5f);
         main.fontOrdinary.draw(batch, howMuch, main.stage.getWidth() / 2 - main.stage.getWidth() / 8,
                                                 getY() + imgButton.getHeight() / 1.5f);
+        sound = Gdx.audio.newSound(Gdx.files.internal("Audio/UI/bonus.mp3"));
 
         addListener(new ClickListener(){
             @Override
@@ -33,7 +34,7 @@ public class Update extends MyButton {
                     sound.play(Volume);
                     main.hamster.setRoomLevel(main.hamster.getRoomLevel()+1);
                     main.hamster.setMoney(main.hamster.getMoney() - Integer.parseInt(howMuch));
-
+                    main.hamster.setHealth(main.hamster.getHealth()+1);
                 }
                 else {
                     Gdx.input.vibrate(20);
