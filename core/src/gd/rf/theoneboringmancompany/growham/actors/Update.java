@@ -34,7 +34,8 @@ public class Update extends MyButton {
                     sound.play(Volume);
                     main.hamster.setRoomLevel(main.hamster.getRoomLevel()+1);
                     main.hamster.setMoney(main.hamster.getMoney() - Integer.parseInt(howMuch));
-                    main.hamster.setHealth(main.hamster.getHealth()+1);
+
+                    if (main.hamster.getHealth() != 100)main.hamster.setHealth(main.hamster.getHealth()+1);
                 }
                 else {
                     Gdx.input.vibrate(20);

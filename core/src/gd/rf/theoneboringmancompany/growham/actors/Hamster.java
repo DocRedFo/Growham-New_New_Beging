@@ -28,7 +28,9 @@ public class Hamster extends Actor {
         this.main = main;
     }
 
-
+    public boolean isHasNamed() {
+        return hasNamed;
+    }
 
     int getHealth() {
         return health;
@@ -64,5 +66,14 @@ public class Hamster extends Actor {
 
     void setRoomLevel(int roomLevel) {
         this.roomLevel = roomLevel;
+    }
+
+    public void setHasNamed(boolean hasNamed) {
+        this.hasNamed = hasNamed;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -38,6 +38,12 @@ public class Back extends MyButton {
     }
 
     @Override
+    public void dispose() {
+        super.dispose();
+        //background.dispose();
+    }
+
+    @Override
     public void draw(Batch batch, float parentAlpha) {
         batch.draw(background, 0, 0);
         super.draw(batch, parentAlpha);

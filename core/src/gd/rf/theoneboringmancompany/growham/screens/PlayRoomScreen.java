@@ -10,6 +10,7 @@ import gd.rf.theoneboringmancompany.growham.actors.Information;
 import gd.rf.theoneboringmancompany.growham.actors.Market;
 import gd.rf.theoneboringmancompany.growham.actors.Room;
 import gd.rf.theoneboringmancompany.growham.actors.Sleep;
+import gd.rf.theoneboringmancompany.growham.actors.WindowNameEnter;
 import gd.rf.theoneboringmancompany.growham.utils.MyScreen;
 
 public class PlayRoomScreen extends MyScreen {
@@ -38,6 +39,10 @@ public class PlayRoomScreen extends MyScreen {
         music.setLooping(true);
         music.setVolume(musicVolume);
         music.play();
+
+        if (!main.hamster.isHasNamed()){
+            main.setScreen(new WindowNameEnter(main, this));
+        }
     }
 
     @Override
